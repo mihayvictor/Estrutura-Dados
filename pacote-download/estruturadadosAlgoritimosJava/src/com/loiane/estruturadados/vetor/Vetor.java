@@ -67,6 +67,7 @@ public class Vetor {
 		return this.tamanho;
 	}
 
+	/*VISUALIZAR RESULTADOS*/
 	@Override
 	public String toString() {
 		
@@ -90,7 +91,9 @@ public class Vetor {
 	}
 	
 	
-	/*public String busca(int posicão) throws IllegalAccessException {
+	/*MÉTODO DE BUSCA
+	 
+	  public String busca(int posicão) throws IllegalAccessException {
 		
 		if (!(posicão >= 0 && posicão < tamanho)) {
 			throw new IllegalAccessException("Posicão inválida");
@@ -108,10 +111,9 @@ public class Vetor {
 	  	}
 	  
 	  	return false
-	  }
+	  }*/
 	 
-		*/
-	
+	/*METODO DE BUSCA MELHORADO*/
 	public String busca(String elemento) {
 		
 		for(int i=0; i<this.tamanho; i++) {
@@ -123,6 +125,7 @@ public class Vetor {
 		
 	}
 	
+	/*AUMENTAR CAPACIDADE*/
 	private void amentaCapacidade() {
 		if (this.tamanho == this.elementos.length) {
 			String[] elementosNovos = new String[this.elementos.length * 2];
@@ -134,6 +137,7 @@ public class Vetor {
 		}
 	}
 	
+	/*REMOVER UM ELEMENTO*/
 	public void remove(int posicao) throws IllegalAccessException {
 		
 		if (!(posicao >= 0 && posicao-1 < tamanho)) {
