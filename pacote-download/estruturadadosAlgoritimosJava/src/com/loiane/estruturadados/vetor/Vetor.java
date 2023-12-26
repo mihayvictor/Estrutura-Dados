@@ -1,7 +1,5 @@
 package com.loiane.estruturadados.vetor;
 
-import java.util.Arrays;
-
 public class Vetor {
 	
 	private String[] elementos;

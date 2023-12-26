@@ -9,8 +9,7 @@ public class Aula02 {
 		Vetor vetor = new Vetor(5);
 		
 		
-	int i=0;
-	i++;
+	
 
 	}
 
