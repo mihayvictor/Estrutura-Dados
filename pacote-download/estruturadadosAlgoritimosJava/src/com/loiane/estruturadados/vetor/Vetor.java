@@ -8,8 +8,6 @@ public class Vetor {
 	private int tamanho;
 	
 	/*CONSTRUTOR*/
-	 
-	
 	public Vetor(int capacidade) {
 		this.elementos = new String[capacidade];
 		this.tamanho = 0;	
@@ -25,7 +23,7 @@ public class Vetor {
 		}
 	}
 	
-	/*public void adiciona(String elemento) throws Exception {
+	public void adiciona(String elemento) throws Exception {
 		if (this.tamanho < this.elementos.length){
 			this.elementos[this.tamanho] = elemento;
 			this.tamanho++;
@@ -36,6 +34,7 @@ public class Vetor {
 		
 		
 	}*/
+	
 	
 	/*ADICIONA AO FINAL*/
 	public boolean adiciona(String elemento){
@@ -96,19 +95,21 @@ public class Vetor {
 		if (!(posicão >= 0 && posicão < tamanho)) {
 			throw new IllegalAccessException("Posicão inválida");
 	}
-		
-		return this.elementos[posicão];
-	}*/
 	
-	/* public boolean busca(String elemento) {
-	 * 	for(i=0; i<this.tamanho,i++){
-	 * 		if (this.elementos[i].equals(elemento){
-	 * 			return true
-	 * 	}
-	 * }
-	 * return false
-	 * 
-	 * 
+		return this.elementos[posicão];
+	}
+	
+	 public boolean busca(String elemento) {
+	  	for(i=0; i<this.tamanho,i++){
+	  		if (this.elementos[i].equals(elemento){
+	  			return true
+			}
+		
+	  	}
+	  
+	  	return false
+	  }
+	 
 		*/
 	
 	public String busca(String elemento) {
@@ -119,7 +120,6 @@ public class Vetor {
 			}
 		}
 		return ("Elemento não Existe");
-		
 		
 	}
 	
