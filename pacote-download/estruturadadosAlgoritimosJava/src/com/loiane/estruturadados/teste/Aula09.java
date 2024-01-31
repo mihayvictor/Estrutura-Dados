@@ -1,5 +1,6 @@
 package com.loiane.estruturadados.teste;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import com.loiane.estruturadados.vetor.Vetor;
@@ -10,6 +11,8 @@ public class Aula09 {
 		int capacidade = 0;
 		int opc = 0;
 		
+		
+	
 
 	Scanner s = new Scanner(System.in);
 	System.out.println("Bem vido a classe Vetor");
@@ -20,12 +23,19 @@ public class Aula09 {
 	System.out.println("Vetor de capacidade " + capacidade + " criado.");
 	System.out.println(" ");
 
+	
 		while (true) {
-
+		int n = 0;
+			try{	
+		
+		
+		
 		System.out.println("---Escoçha uma opção: ---");
 		System.out.println("[1] Adicionar novo elemento");
 		System.out.println("[2] Vizualizar o vetor");
-		int n = s.nextInt();
+		System.out.println("[3] Remover Elemento");
+		n = s.nextInt();
+		
 		
 
 		switch (n) {
@@ -38,11 +48,23 @@ public class Aula09 {
 				case 2:
 				System.out.println(vetor);
 				break;
+
+				case 3:
+				System.out.println("Qual o índice do elemento a ser removido? ");
+				int remover = s.nextInt();
+				vetor.remove(remover);;
+				break;
 		
 			default:
+			System.out.println("Número Ínvalido");
 				break;
 		}
+
+} catch (InputMismatchException e) {
+		System.out.println("Opção Ínvalida, tente novamente.");
 		
+		
+	}
 		
 		
 		
